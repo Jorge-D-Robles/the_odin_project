@@ -35,3 +35,33 @@ p2.textContent = "ME TOO!";
 newDiv.appendChild(p2);
 
 container.appendChild(newDiv);
+container.style.margin = "10px";
+
+// button with onclick method
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World!");
+
+//button with event listener since onclick is only once
+const btn2 = document.querySelector('#btn2');
+btn2.addEventListener('click', () => {
+    alert("Hello, clickers!");
+});
+
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
+btn2.addEventListener('click', function (e) {
+    console.log(e.target);
+    console.log(e);
+    if (e.target.style.background != 'blue') {
+        e.target.style.background = 'blue';
+    }
+    else {
+        e.target.style.background = 'red';
+    }
+
+});
