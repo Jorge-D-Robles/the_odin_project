@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <h1 id="title">
+                Rock Paper Scissors!
+            </h1>
+            <h2 class="choice">
+                Click on either rock, paper, or scissors, and the computer will battle you!
+            </h2>
+    </header>
+    <div class = "game">
+        <div id="rock" class="panel">
+            <img src="rock.png">
+        </div>
+        <div id="paper" class="panel">
+            <img src="paper.png">
+        </div>
+        <div id="scissors" class="panel">
+            <img src="scissors.png">
+        </div>
+    </div>
+        <div class = scoreboard>
+            <p id="winner">Click a choice to get started!</p>
+            <p id="score"></p>
+        </div>
+        <div class="reset">
+            Reset
+        </div>
+    </div>
+
+
+  </body>
+  <script src="rpc.js"></script>
+</html>
