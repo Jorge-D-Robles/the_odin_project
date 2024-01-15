@@ -40,6 +40,8 @@ digits.forEach((digit) => {
   });
 });
 
+// todo: add chaining of operations, make sure result is added properly to input. fix edge cases. then we are done
+
 const operators = document.querySelectorAll(".operators");
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
