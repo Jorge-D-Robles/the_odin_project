@@ -45,14 +45,7 @@ digits.forEach((digit) => {
 const operators = document.querySelectorAll(".operators");
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
-    if (!op && !flag) {
-      input1 = parseFloat(inputStr);
-      inputStr = ""; // Reset inputStr to an empty string
-      op = operator.value;
-      userInput.textContent += ` ${op} `;
-      flag = true;
-    } else {
-      equalsFunction();
+    if (done) {
       done = false;
       flag = false;
       input1 = res;
@@ -60,6 +53,23 @@ operators.forEach((operator) => {
       userInput.textContent = input1;
       result.textContent = "";
       op = "";
+    }
+    if (!op && !flag) {
+      input1 = parseFloat(inputStr);
+      inputStr = ""; // Reset inputStr to an empty string
+      op = operator.value;
+      userInput.textContent += ` ${op} `;
+      flag = true;
+    } else {
+      let tmp = op;
+      equalsFunction();
+      op = tmp;
+      done = false;
+      flag = true;
+      input1 = res;
+      inputStr = res.toString(); // Update inputStr to res
+      userInput.textContent = `${inputStr} ${op} `;
+      result.textContent = "";
     }
   });
 });
